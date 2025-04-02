@@ -3,6 +3,7 @@
 namespace TomatoPHP\FilamentNotes\Models;
 
 use App\Models\Team;
+use Filament\Facades\Filament;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
@@ -64,6 +65,16 @@ class Note extends Model
     public function team()
     {
         return $this->belongsTo(Team::class);
+    }
+
+    public static function booted()
+    {
+        parent::booted();
+
+        static::creating(function ($model) {
+            $model->team_id = Filament::getTenant()->id;
+        });
+
     }
 
     /**
