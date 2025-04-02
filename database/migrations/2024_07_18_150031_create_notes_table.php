@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
 
+            $table->foreignId('team_id');
+
             $table->string('group')->nullable()->index();
             $table->string('status')->default('pending')->nullable()->index();
 
