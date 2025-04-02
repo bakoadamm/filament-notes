@@ -2,6 +2,7 @@
 
 namespace TomatoPHP\FilamentNotes\Models;
 
+use App\Models\Team;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
@@ -58,6 +59,11 @@ class Note extends Model
     public function noteMetas()
     {
         return $this->hasMany(NoteMeta::class);
+    }
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
     }
 
     /**
