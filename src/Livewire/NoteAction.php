@@ -271,6 +271,7 @@ class NoteAction extends Component implements HasActions, HasForms, HasInfolists
                 ] : [];
             })
             ->modalHeading('')
+            ->closeModalOnClickAway(false)
             ->modalContent(function (){
                 return view('filament-notes::note-view', ['note' => $this->note]);
             })
