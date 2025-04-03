@@ -73,11 +73,11 @@ return [
                 "pending" => "Folyamatban"
             ],
             "notification" => [
-                "title" => "Checklist Updated",
-                "body" => "The checklist has been updated.",
+                "title" => "Teendőlista frissítve",
+                "body" => "A teendőlista sikeresen frissítésre került.",
                 "updated" => [
-                    "title" => "Checklist Item Updated",
-                    "body" => "The checklist item has been updated."
+                    "title" => "Teendőlista elem frissítve",
+                    "body" => "A teendőlista eleme sikeresen frissítésre került."
                 ],
             ]
         ]
